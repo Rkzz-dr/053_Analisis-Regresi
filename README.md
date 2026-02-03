@@ -1,0 +1,5 @@
+## About Dataset
+
+This dataset was retrieved from [myanimelist.net](https://myanimelist.net/) via the [MyAnimeList API](https://myanimelist.net/apiconfig/references/api/v2) on February 2, 2026. It contains the Top 500 most popular manga, ranked by their total member count. For entries with a 'currently_publishing' status that originally showed a chapter count of '0', I have manually updated them to their most recent chapter releases.
+
+This dataset originally contained 'Manga_Title', 'Popularity', 'Rating', 'Manga_Age', 'Chapter_Count', 'Status', and 'Genre'. However, for regression analysis purposes, the 'Status' column was changed to 'Is_Finished', which contains '1' if the manga status is 'finished' and '0' otherwise. For the 'Genre' column, I changed it into several dummy variables for the top 8 most frequent genres, which contain '1' if the manga has that genre and '0' if it doesn't. The reason I chose 8 variables is that these eight genres are more dominant, with a significant gap compared to the 9th most frequent genre.
